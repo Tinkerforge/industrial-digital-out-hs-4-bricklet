@@ -43,7 +43,7 @@
     (user_trace_width 1)
     (user_trace_width 2)
     (user_trace_width 3)
-    (trace_clearance 0.19)
+    (trace_clearance 0.149)
     (zone_clearance 0.2)
     (zone_45_only no)
     (trace_min 0.15)
@@ -66,14 +66,13 @@
     (mod_text_width 0.15)
     (pad_size 1.4 1.4)
     (pad_drill 0.6)
-    (pad_to_mask_clearance 0.051)
-    (solder_mask_min_width 0.25)
+    (pad_to_mask_clearance 0)
     (aux_axis_origin 118 73)
     (grid_origin 118 73)
     (visible_elements FFFFFF7F)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
-      (usegerberextensions false)
+      (usegerberextensions true)
       (usegerberattributes false)
       (usegerberadvancedattributes false)
       (creategerberjobfile false)
@@ -92,12 +91,12 @@
       (plotvalue true)
       (plotinvisibletext false)
       (padsonsilk false)
-      (subtractmaskfromsilk false)
+      (subtractmaskfromsilk true)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "proto/"))
   )
 
   (net 0 "")
@@ -155,7 +154,7 @@
   (net 52 "Net-(RP5-Pad5)")
 
   (net_class Default "Dies ist die voreingestellte Netzklasse."
-    (clearance 0.19)
+    (clearance 0.149)
     (trace_width 0.25)
     (via_dia 0.8)
     (via_drill 0.4)
@@ -2757,7 +2756,7 @@
     (polygon
       (pts
         (xy 141.6 102.7) (xy 139.2 102.7) (xy 138 103.6) (xy 138 112.55) (xy 123.5 112.55)
-        (xy 123.5 107.4) (xy 134.7 107.4) (xy 134.7 103.5) (xy 135.2 91.8) (xy 141.6 91.8)
+        (xy 123.5 107.4) (xy 134.7 107.4) (xy 134.7 103.5) (xy 134.7 91.8) (xy 141.6 91.8)
       )
     )
     (filled_polygon
@@ -2765,7 +2764,7 @@
         (xy 141.473 102.573) (xy 139.2 102.573) (xy 139.151399 102.582667) (xy 139.1238 102.5984) (xy 137.9238 103.4984)
         (xy 137.89072 103.535294) (xy 137.873 103.6) (xy 137.873 112.423) (xy 123.627 112.423) (xy 123.627 107.527)
         (xy 134.7 107.527) (xy 134.748601 107.517333) (xy 134.789803 107.489803) (xy 134.817333 107.448601) (xy 134.827 107.4)
-        (xy 134.827 103.502708) (xy 135.321688 91.927) (xy 141.473 91.927)
+        (xy 134.827 91.927) (xy 141.473 91.927)
       )
     )
   )
@@ -2796,15 +2795,15 @@
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 149.2 91.8) (xy 155.6 91.8) (xy 155.6 102.7) (xy 153.2 102.7) (xy 152.3 103.6)
+        (xy 148.7 91.8) (xy 155.6 91.8) (xy 155.6 102.7) (xy 153.2 102.7) (xy 152.3 103.6)
         (xy 152.3 107) (xy 148.7 107) (xy 148.7 103.5)
       )
     )
     (filled_polygon
       (pts
         (xy 155.473 102.573) (xy 153.2 102.573) (xy 153.151399 102.582667) (xy 153.110197 102.610197) (xy 152.210197 103.510197)
-        (xy 152.182667 103.551399) (xy 152.173 103.6) (xy 152.173 106.873) (xy 148.827 106.873) (xy 148.827 103.502708)
-        (xy 149.321688 91.927) (xy 155.473 91.927)
+        (xy 152.182667 103.551399) (xy 152.173 103.6) (xy 152.173 106.873) (xy 148.827 106.873) (xy 148.827 91.927)
+        (xy 155.473 91.927)
       )
     )
   )
