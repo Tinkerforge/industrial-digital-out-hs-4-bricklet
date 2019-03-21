@@ -1,7 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:power
 LIBS:74xx
-LIBS:industrial-digital-out-hs-4-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -118,14 +117,14 @@ F 3 "" H 1500 650 60  0001 C CNN
 	1    1500 650 
 	1    0    0    -1  
 $EndComp
-Text GLabel 2200 3750 0    39   Output ~ 0
-OUT2
-Text GLabel 2200 3850 0    39   Output ~ 0
-OUT3
-Text GLabel 2200 3950 0    39   Output ~ 0
-OUT4
-Text GLabel 2200 5000 0    39   Output ~ 0
+Text GLabel 2200 5200 0    39   Output ~ 0
 OUT1
+Text GLabel 2200 5100 0    39   Output ~ 0
+OUT2
+Text GLabel 2200 5000 0    39   Output ~ 0
+OUT3
+Text GLabel 2200 5300 0    39   Output ~ 0
+OUT0
 $Comp
 L tinkerforge:CON-SENSOR2 P1
 U 1 1 5004F5E5
@@ -277,23 +276,23 @@ S-MISO
 $Comp
 L tinkerforge:CONN_01X01 P3
 U 1 1 5A58EE20
-P 1050 4900
-F 0 "P3" H 1050 5000 50  0000 C CNN
-F 1 "Debug" V 1150 4900 50  0000 C CNN
-F 2 "kicad-libraries:DEBUG_PAD" H 1050 4900 50  0001 C CNN
-F 3 "" H 1050 4900 50  0000 C CNN
-	1    1050 4900
+P 1050 3550
+F 0 "P3" H 1050 3650 50  0000 C CNN
+F 1 "Debug" V 1150 3550 50  0000 C CNN
+F 2 "kicad-libraries:DEBUG_PAD" H 1050 3550 50  0001 C CNN
+F 3 "" H 1050 3550 50  0000 C CNN
+	1    1050 3550
 	0    1    -1   0   
 $EndComp
 $Comp
 L tinkerforge:CONN_01X02 P4
 U 1 1 5A58EFD9
-P 850 5250
-F 0 "P4" H 850 5400 50  0000 C CNN
-F 1 "Boot" V 950 5250 50  0000 C CNN
-F 2 "kicad-libraries:SolderJumper" H 850 5250 50  0001 C CNN
-F 3 "" H 850 5250 50  0000 C CNN
-	1    850  5250
+P 850 4000
+F 0 "P4" H 850 4150 50  0000 C CNN
+F 1 "Boot" V 950 4000 50  0000 C CNN
+F 2 "kicad-libraries:SolderJumper" H 850 4000 50  0001 C CNN
+F 3 "" H 850 4000 50  0000 C CNN
+	1    850  4000
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -398,16 +397,16 @@ Wire Wire Line
 $Comp
 L tinkerforge:GND #PWR09
 U 1 1 5A591358
-P 1050 5350
-F 0 "#PWR09" H 1050 5350 30  0001 C CNN
-F 1 "GND" H 1050 5280 30  0001 C CNN
-F 2 "" H 1050 5350 60  0001 C CNN
-F 3 "" H 1050 5350 60  0001 C CNN
-	1    1050 5350
+P 1050 4100
+F 0 "#PWR09" H 1050 4100 30  0001 C CNN
+F 1 "GND" H 1050 4030 30  0001 C CNN
+F 2 "" H 1050 4100 60  0001 C CNN
+F 3 "" H 1050 4100 60  0001 C CNN
+	1    1050 4100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1050 5350 1050 5300
+	1050 4100 1050 4050
 $Comp
 L tinkerforge:LED D2
 U 1 1 5AAA908C
@@ -439,7 +438,7 @@ LED3
 Text GLabel 2200 4350 0    39   Output ~ 0
 LED0
 Wire Wire Line
-	2400 3850 2200 3850
+	2400 5100 2200 5100
 $Comp
 L tinkerforge:LED D3
 U 1 1 5AAAA193
@@ -639,13 +638,13 @@ Wire Wire Line
 Wire Wire Line
 	6400 5000 6250 5000
 Text GLabel 5000 4800 0    39   Input ~ 0
-OUT1
+OUT0
 Text GLabel 5000 3850 0    39   Input ~ 0
-OUT2
+OUT1
 Text GLabel 5000 5100 0    39   Output ~ 0
-MSense1
+MSense0
 Text GLabel 5000 4150 0    39   Output ~ 0
-MSense2
+MSense1
 $Comp
 L tinkerforge:R R4
 U 1 1 5C7AA846
@@ -753,13 +752,13 @@ Wire Wire Line
 Wire Wire Line
 	6400 2200 6250 2200
 Text GLabel 5000 2000 0    39   Input ~ 0
-OUT3
+OUT2
 Text GLabel 5000 2300 0    39   Output ~ 0
-MSense3
+MSense2
 Text GLabel 5000 1150 0    39   Output ~ 0
-MSense4
+MSense3
 Text GLabel 5000 850  0    39   Input ~ 0
-OUT4
+OUT3
 $Comp
 L tinkerforge:R R2
 U 1 1 5C8084D6
@@ -817,13 +816,13 @@ Connection ~ 5600 1650
 Text Notes 10750 3300 0    63   ~ 0
 OUT4\nOUT3\nGND\nVCC2\nOUT2\nOUT1\nGND\nVCC1
 Text GLabel 2200 6250 0    39   Input ~ 0
-MSense1
+MSense0
 Text GLabel 2200 6150 0    39   Input ~ 0
-MSense2
+MSense1
 Text GLabel 2200 5950 0    39   Input ~ 0
-MSense3
+MSense2
 Text GLabel 2200 5850 0    39   Input ~ 0
-MSense4
+MSense3
 Wire Wire Line
 	2200 5850 2400 5850
 Wire Wire Line
@@ -1101,9 +1100,9 @@ F 3 "" H 7750 6100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 7300 5600 0    39   Output ~ 0
-VSense1
+VSense0
 Text GLabel 7300 2800 0    39   Output ~ 0
-VSense2
+VSense1
 Wire Wire Line
 	7750 2800 7300 2800
 Connection ~ 7750 2800
@@ -1113,9 +1112,9 @@ Connection ~ 7750 5600
 Wire Wire Line
 	2400 5750 1700 5750
 Text GLabel 2200 6050 0    39   Input ~ 0
-VSense2
-Text GLabel 2200 6350 0    39   Input ~ 0
 VSense1
+Text GLabel 2200 6350 0    39   Input ~ 0
+VSense0
 Wire Wire Line
 	2200 6250 2400 6250
 Wire Wire Line
@@ -1176,16 +1175,16 @@ Wire Wire Line
 NoConn ~ 5100 950 
 NoConn ~ 5500 950 
 Wire Wire Line
-	2400 5000 2200 5000
+	2400 5300 2200 5300
 Wire Wire Line
 	2200 4350 2400 4350
 Wire Wire Line
-	1050 5200 2400 5200
+	1050 3950 2400 3950
 Wire Wire Line
-	2400 3950 2200 3950
+	2400 5000 2200 5000
 Wire Wire Line
-	1050 5100 2400 5100
+	1050 3750 2400 3750
 Wire Wire Line
-	2400 3750 2200 3750
-NoConn ~ 2400 5300
+	2400 5200 2200 5200
+NoConn ~ 2400 3850
 $EndSCHEMATC
