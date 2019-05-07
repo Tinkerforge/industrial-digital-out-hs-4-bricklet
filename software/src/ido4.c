@@ -179,6 +179,7 @@ void ido4_init(void) {
 		ido4.channels[i].monoflop.time = 0;
 		ido4.channels[i].monoflop.time_start = 0;
 		ido4.channels[i].monoflop.time_remaining = 0;
+		ido4.channels[i].monoflop.running = false;
 
 		XMC_GPIO_Init(ido4.channels[i].status_led.port, ido4.channels[i].status_led.pin, &ch_pin_out_config);
 	
@@ -198,21 +199,15 @@ void ido4_tick(void) {
 	// Iterate all channels
 	for(uint8_t i = 0; i < NUMBER_OF_CHANNELS; i++) {
 		// Manage monoflop
-		if(ido4.channels[i].monoflop.time > 0) {
+		if(ido4.channels[i].monoflop.running) {
 			if(system_timer_is_time_elapsed_ms(ido4.channels[i].monoflop.time_start,
 			                                   ido4.channels[i].monoflop.time)) {
 				// Monoflop time expired
-
-				ido4.channels[i].monoflop.time = 0;
 				ido4.channels[i].monoflop.time_start = 0;
 				ido4.channels[i].monoflop.time_remaining = 0;
+				ido4.channels[i].monoflop.running = false;
 
-				if(ido4.channels[i].value) {
-					ido4.channels[i].value = false;
-				}
-				else {
-					ido4.channels[i].value = true;
-				}
+				ido4.channels[i].value = !ido4.channels[i].value;
 
 				if(ido4.channels[i].value) {
 					XMC_GPIO_SetOutputHigh(ido4.channels[i].port, ido4.channels[i].pin);

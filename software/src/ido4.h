@@ -47,6 +47,7 @@ typedef struct {
 	uint32_t time;
 	uint32_t time_start;
 	uint32_t time_remaining;
+	bool running;
 } CH_MONOFLOP_t;
 
 typedef struct {
